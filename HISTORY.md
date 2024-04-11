@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.6.0](https://github.com/mongodb/node-mongodb-native/compare/v6.5.0...v6.6.0) (2024-04-11)
+
+
+### Features
+
+* **NODE-5678:** add options parsing support for timeoutMS and defaultTimeoutMS ([#4068](https://github.com/mongodb/node-mongodb-native/issues/4068)) ([ddd1e81](https://github.com/mongodb/node-mongodb-native/commit/ddd1e81c970ae16b8b7adc7045832462d283e43c))
+* **NODE-5762:** include `cause` and package name for all `MongoMissingDependencyError`s ([#4067](https://github.com/mongodb/node-mongodb-native/issues/4067)) ([62ea94b](https://github.com/mongodb/node-mongodb-native/commit/62ea94b9f529d1b850c77fb5219014159b4d27ab))
+* **NODE-5825:** add `minRoundTripTime` to `ServerDescription` and change `roundTripTime` to a moving average ([#4059](https://github.com/mongodb/node-mongodb-native/issues/4059)) ([0e3d6ea](https://github.com/mongodb/node-mongodb-native/commit/0e3d6ead735ed067bd044c8d0c9c307d970f1986))
+* **NODE-6020:** upgrade BSON to ^6.5.0 ([#4035](https://github.com/mongodb/node-mongodb-native/issues/4035)) ([8ab2055](https://github.com/mongodb/node-mongodb-native/commit/8ab205569436a629f8b7b8bbc7f6cb29a3939864))
+
+
+### Bug Fixes
+
+* **NODE-3681:** Typescript error in Collection.findOneAndModify UpdateFilter $currentDate ([#4047](https://github.com/mongodb/node-mongodb-native/issues/4047)) ([a8670a7](https://github.com/mongodb/node-mongodb-native/commit/a8670a76cd2746e8353504c100050b474d844f36))
+* **NODE-5530:** make topology descriptions JSON stringifiable  ([#4070](https://github.com/mongodb/node-mongodb-native/issues/4070)) ([3a0e011](https://github.com/mongodb/node-mongodb-native/commit/3a0e01191be5836c4d41bd92c5cc64141b531dda))
+* **NODE-5745:** ignore Read/Write Concern in Atlas Search Index Helpers ([#4042](https://github.com/mongodb/node-mongodb-native/issues/4042)) ([67d7bab](https://github.com/mongodb/node-mongodb-native/commit/67d7bab434164fa9a81e22edde9339f89be91f65))
+* **NODE-5971:** attach `v` to createIndexes command when `version` is specified ([#4043](https://github.com/mongodb/node-mongodb-native/issues/4043)) ([1879a04](https://github.com/mongodb/node-mongodb-native/commit/1879a04b9053e8c77c6957e415886c534fe9992b))
+* **NODE-5999:** Change TopologyDescription.error type to MongoError ([#4028](https://github.com/mongodb/node-mongodb-native/issues/4028)) ([30432e8](https://github.com/mongodb/node-mongodb-native/commit/30432e8664cb142e999159e5d06ceaaf14f51eb8))
+* **NODE-6019:** indexExists always returns false when `full` is set to `true` ([#4034](https://github.com/mongodb/node-mongodb-native/issues/4034)) ([0ebc1ac](https://github.com/mongodb/node-mongodb-native/commit/0ebc1ac099a2ee869d8c1cb1c7632422c4e6a7ba))
+* **NODE-6029:** update types for collection listing indexes ([#4072](https://github.com/mongodb/node-mongodb-native/issues/4072)) ([232bf3c](https://github.com/mongodb/node-mongodb-native/commit/232bf3cb9e41b717680ad0a5678bbc16d3cc243f))
+* **NODE-6051:** only provide expected allowed keys to libmongocrypt after fetching aws kms credentials ([#4057](https://github.com/mongodb/node-mongodb-native/issues/4057)) ([c604e74](https://github.com/mongodb/node-mongodb-native/commit/c604e74e2ca0bcf827441558e40cecbaf9f4fe94))
+* **NODE-6066:** ClusterTime.signature can be undefined ([#4069](https://github.com/mongodb/node-mongodb-native/issues/4069)) ([ce55ca9](https://github.com/mongodb/node-mongodb-native/commit/ce55ca9f5c7ea81058627b60e2cec5482d2be1f6))
+
 ## [6.5.0](https://github.com/mongodb/node-mongodb-native/compare/v6.4.0...v6.5.0) (2024-03-11)
 
 
